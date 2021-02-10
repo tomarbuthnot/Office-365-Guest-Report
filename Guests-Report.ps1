@@ -37,7 +37,7 @@ $GuestUsersAndDomain =  @()
 
                         $output | add-member NoteProperty "ObjectId" -value $($_.ObjectId)
                         $output | add-member NoteProperty "DisplayName" -value $($_.DisplayName)
-                        $output | add-member NoteProperty "GuestDomain" -value $split2[1].ToLower()
+                        $output | add-member NoteProperty "GuestDomain" -value $split2[$split2.count-1].ToLower()
                         $output | add-member NoteProperty "UserPrincipalName" -value $($_.UserPrincipalName)
 
                         $GuestUsersAndDomain += $output
